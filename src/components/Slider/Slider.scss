@@ -1,16 +1,10 @@
-
 .banner-slider {
   position: relative;
-  //background-color: #c512e1;
 
   &__slides {
     box-sizing: border-box;
-
     height: 600px;
-    //border-radius: 20px;
-
     padding: 0 32px;
-    //background-color: #ff0062;
   }
 
   &__button {
@@ -27,22 +21,16 @@
     &--prev {
       top: 50%;
       left: 32px;
-      //background-color: #d10000;
     }
 
     &--next {
       top: 50%;
-
       right: 32px;
-      //left: auto;
     }
   }
 
   &__slide {
     box-sizing: border-box;
-    //background-color: bisque;
-    //width: 100%;
-    //height: 100%;
   }
 
   &__image {
@@ -50,7 +38,6 @@
     width: 100%;
     height: 600px;
     object-fit: cover;
-
     border-radius: 20px;
   }
 }

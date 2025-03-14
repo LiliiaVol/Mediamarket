@@ -1,0 +1,18 @@
+.video--small {
+  display: none;
+}
+@media (max-width: 1130px) {
+  .video--small {
+    display: block;
+  }
+}
+.video--big {
+  display: block;
+}
+@media (max-width: 1130px) {
+  .video--big {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Video.css.map */

@@ -1,5 +1,6 @@
 @use '../../styles/fonts.scss';
 @use '../../styles/variables.scss';
+@use '../../styles/mixins/mixins';
 
 .header {
 
@@ -14,12 +15,20 @@
     &:hover {
       transform: scale(1.2);
     }
+
+    @include mixins.on-phone {
+      width: 24px;
+    }
   }
 
   &__links-container {
     display: flex;
     flex-direction: row;
     gap: 32px;
+
+    @include mixins.on-phone {
+      gap: 12px;
+    }
   }
 
   &__link {
@@ -28,6 +37,10 @@
 
     &:hover {
       color: rgb(218, 210, 210);
+    }
+
+    @include mixins.on-phone {
+      font-size: 12px;
     }
   }
 }

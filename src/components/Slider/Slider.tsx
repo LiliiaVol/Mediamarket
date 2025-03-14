@@ -1,37 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-// import { useState, useEffect } from "react";
-// import { MOBILE_BREAKPOINT } from "../../../../constants/constants";
 import "/node_modules/swiper/swiper.min.css";
 
 type Props = {
   slides: string[];
-  // slidesPerScreen: number;
 };
 
 import "./Slider.scss";
 import * as React from "react";
 export const Slider: React.FC<Props> = ({ slides }) => {
-  // const [isMobile, setIsMobile] = useState(false);
-
-  // useEffect(() => {
-  //   const isWindowMobile = () => {
-  //     if (window.innerWidth < MOBILE_BREAKPOINT) {
-  //       setIsMobile(true);
-  //     } else {
-  //       setIsMobile(false);
-  //     }
-  //   };
-  //
-  //   isWindowMobile();
-  //
-  //   window.addEventListener("resize", isWindowMobile);
-  //
-  //   return () => window.removeEventListener("resize", isWindowMobile);
-  // }, []);
-
   return (
-    <div className="banner-slider">
+    <div className="banner-slider" id="slider">
       <div className="banner-slider__slides">
         <button className="banner-slider__button button banner-slider__button--prev">
           &#10094;
@@ -73,21 +52,7 @@ export const Slider: React.FC<Props> = ({ slides }) => {
                 />
               </SwiperSlide>
             ))}
-          {/*<SwiperSlide className="banner-slider__slide">*/}
-          {/*  <img*/}
-          {/*    // src={isMobile ? slide.mobileContent : slide.content}*/}
-          {/*    src="/sliders/slide1.avif"*/}
-          {/*    alt={`banner_first`}*/}
-          {/*    className="banner-slider__image image"*/}
-          {/*  />*/}
-          {/*</SwiperSlide>*/}
         </Swiper>
-      </div>
-
-      <div className="swiper-pagination">
-        <div className="swiper-pagination-bullet"></div>
-        <div className="swiper-pagination-bullet"></div>
-        <div className="swiper-pagination-bullet"></div>
       </div>
     </div>
   );

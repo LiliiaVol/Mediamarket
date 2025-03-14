@@ -25,28 +25,20 @@
 
   &__button {
     margin-top: 8px;
-
     height: 56px;
-
     background-color: variables.$second-color;
     border-radius: 8px;
     border: none;
-
     font-family: fonts.$main-font;
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-
-    //color: colors.$base-color-text;
-
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-
     transition: opacity 0.3s;
-
     cursor: pointer;
 
     &:hover {
@@ -57,23 +49,17 @@
 
   &__input {
     box-sizing: border-box;
-
     height: 50px;
     padding: 0 16px;
-
     border: none;
-    //border: 2px solid variables.$second-color;
     border-radius: 8px;
-
     transition: border variables.$transition-duration;
     cursor: pointer;
-
     font-family: fonts.$main-font;
     font-size: 16px;
 
     &:hover {
       transition: border variables.$transition-duration;
-
       border: 1px solid #ADAEBC;
     }
 
@@ -81,7 +67,6 @@
       font-family: fonts.$main-font;
       font-weight: 400;
       font-size: 16px;
-
       color: #ADAEBC;
     }
   }

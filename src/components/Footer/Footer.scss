@@ -1,0 +1,24 @@
+@use '../../styles/fonts.scss';
+@use '../../styles/variables.scss';
+@use '../../styles/mixins/mixins';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: variables.$background-color;
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__icon {
+    width: 32px;
+    transition: transform variables.$transition-duration ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

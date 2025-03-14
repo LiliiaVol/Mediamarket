@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("opentype");
+  font-style: normal;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(50, 172, 157);
+}
+.footer__icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.footer__icon {
+  width: 32px;
+  transition: transform 0.3s ease;
+}
+.footer__icon:hover {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=Footer.css.map */

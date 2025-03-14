@@ -13,10 +13,20 @@
 .header__icon:hover {
   transform: scale(1.2);
 }
+@media (max-width: 1130px) {
+  .header__icon {
+    width: 24px;
+  }
+}
 .header__links-container {
   display: flex;
   flex-direction: row;
   gap: 32px;
+}
+@media (max-width: 1130px) {
+  .header__links-container {
+    gap: 12px;
+  }
 }
 .header__link {
   font-weight: 500;
@@ -24,6 +34,11 @@
 }
 .header__link:hover {
   color: rgb(218, 210, 210);
+}
+@media (max-width: 1130px) {
+  .header__link {
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=Header.css.map */

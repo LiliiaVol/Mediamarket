@@ -1,0 +1,19 @@
+@use '../../styles/mixins/mixins';
+
+.video {
+  &--small {
+    display: none;
+
+    @include mixins.on-phone {
+      display: block;
+    }
+  }
+
+  &--big {
+    display: block;
+
+    @include mixins.on-phone {
+      display: none;
+    }
+  }
+}

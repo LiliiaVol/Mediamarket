@@ -10,6 +10,12 @@
 
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: rgb(55, 60, 60);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,6 +29,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 1130px) {
+  .container {
+    padding: 12px 24px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,5 +1,6 @@
 import "./Form.scss";
 import { useState } from "react";
+import { t } from "i18next";
 
 export const Form = () => {
   const [formData, setFormData] = useState({
@@ -13,31 +14,8 @@ export const Form = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault(); // Забороняємо перезавантаження сторінки
-  //
-  //   try {
-  //     const response = await fetch("server.php", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/x-www-form-urlencoded",
-  //       },
-  //       body: new URLSearchParams(formData).toString(),
-  //     });
-  //
-  //     if (response.ok) {
-  //       alert("Дані надіслано успішно!");
-  //       setFormData({ name: "", surname: "", phone: "", email: "" }); // Очищаємо форму
-  //     } else {
-  //       alert("Помилка при надсиланні даних.");
-  //     }
-  //   } catch (error) {
-  //     console.error("Помилка:", error);
-  //   }
-  // };
-
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Забороняємо перезавантаження сторінки
+    e.preventDefault();
 
     try {
       const response = await fetch("server.php", {
@@ -60,12 +38,12 @@ export const Form = () => {
   };
 
   return (
-    <div className="form__container">
+    <div className="form__container" id="form">
       <form onSubmit={handleSubmit} method="post" className="form">
         <label className="form__label">
-          Name:
+          {t("form.name")}:
           <input
-            placeholder="John"
+            placeholder={t("form.placeholderName")}
             required
             className="form__input"
             type="text"
@@ -75,9 +53,9 @@ export const Form = () => {
           />
         </label>
         <label className="form__label">
-          Surname:
+          {t("form.surname")}:
           <input
-            placeholder="Doe"
+            placeholder={t("form.placeholderSurname")}
             required
             className="form__input"
             type="text"
@@ -87,7 +65,7 @@ export const Form = () => {
           />
         </label>
         <label className="form__label">
-          Phone:
+          {t("form.phone")}:
           <input
             placeholder="+380000000000"
             required
@@ -99,7 +77,7 @@ export const Form = () => {
           />
         </label>
         <label className="form__label">
-          Email:
+          {t("form.email")}:
           <input
             placeholder="email@gmail.com"
             required
@@ -111,7 +89,7 @@ export const Form = () => {
           />
         </label>
         <button type="submit" className="form__button">
-          Submit
+          {t("form.submit")}
         </button>
       </form>
     </div>
