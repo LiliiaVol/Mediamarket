@@ -25,14 +25,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(149, 149, 149, 0.5), rgba(255, 255, 255, 0.5)), url("background_paw.JPG") repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(149, 149, 149, 0.5), rgba(255, 255, 255, 0.5)), url("/background_paw.JPG") repeat;
 }
 
 .container {
-  padding: 12px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 48px;
 }
 @media (max-width: 1130px) {
   .container {

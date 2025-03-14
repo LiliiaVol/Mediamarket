@@ -27,17 +27,17 @@ body {
   padding: 0;
   background:
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(149, 149, 149, 0.5), rgba(255, 255, 255, 0.5)),
-    url("background_paw.JPG") repeat;
+    url("/background_paw.JPG") repeat;
 }
 
 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 12px 48px;
 
   @include mixins.on-phone {
     padding: 12px 24px;
   }
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
