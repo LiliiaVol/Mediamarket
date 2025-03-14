@@ -37,7 +37,6 @@
 
     &:hover {
       color: variables.$accent-color;
-      //color: #F7F7F0;
     }
 
     @include mixins.on-phone {

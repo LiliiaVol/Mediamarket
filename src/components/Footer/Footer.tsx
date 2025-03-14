@@ -15,7 +15,9 @@ export const Footer = () => {
         </a>
       </div>
       <div className="footer_text">
-        <p>©Borodina Liliia</p>
+        <a href="https://drive.google.com/file/d/1jKg3oPYPFNhQpgHcgp5zLyPgY8mipFv6/view?usp=sharing">
+          <p>©Borodina Liliia</p>
+        </a>
       </div>
     </footer>
   );
