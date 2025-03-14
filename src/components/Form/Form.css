@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("opentype");
+  font-style: normal;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form__container {
+  box-sizing: border-box;
+  border: 1px solid rgb(39, 151, 138);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(50, 172, 157);
+  width: 100%;
+}
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form__button {
+  margin-top: 8px;
+  height: 56px;
+  background-color: rgb(239, 137, 108);
+  border-radius: 8px;
+  border: none;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.form__button:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.form__input {
+  box-sizing: border-box;
+  height: 50px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  transition: border 0.3s;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 16px;
+}
+.form__input:hover {
+  transition: border 0.3s;
+  border: 1px solid #ADAEBC;
+}
+.form__input::placeholder {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ADAEBC;
+}
+
+/*# sourceMappingURL=Form.css.map */

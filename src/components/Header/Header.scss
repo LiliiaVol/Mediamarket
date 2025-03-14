@@ -1,0 +1,33 @@
+@use '../../styles/fonts.scss';
+@use '../../styles/variables.scss';
+
+.header {
+
+  &__container {
+    background-color: variables.$background-color;
+  }
+
+  &__icon {
+    width: 64px;
+    transition: transform variables.$transition-duration ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__links-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  &__link {
+    font-weight: 500;
+    transition: color variables.$transition-duration;
+
+    &:hover {
+      color: rgb(218, 210, 210);
+    }
+  }
+}

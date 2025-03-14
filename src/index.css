@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("opentype");
+  font-style: normal;
+}
+:root {
+  font-family: "Montserrat";
+  color: rgb(55, 60, 60);
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(81, 178, 162);
+}
+
+.container {
+  padding: 12px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=index.css.map */
