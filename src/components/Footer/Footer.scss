@@ -15,7 +15,7 @@
   }
 
   &__icon {
-    width: 32px;
+    width: variables.$regular-gap;
     transition: transform variables.$transition-duration ease;
 
     &:hover {

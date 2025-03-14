@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Slider.scss"],"names":[],"mappings":"AAAA;EACE;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EAEA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAIJ;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA","file":"Slider.css"}
+{"version":3,"sourceRoot":"","sources":["Slider.scss","../../styles/variables.scss"],"names":[],"mappings":"AAEA;EACE;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EAEA;EACA;EACA;;AAEA;EACE;EACA,MClBQ;;ADqBV;EACE;EACA,OCvBQ;;AD2BZ;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA","file":"Slider.css"}

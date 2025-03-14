@@ -4,7 +4,7 @@
   font-style: normal;
 }
 .header__container {
-  background-color: rgb(50, 172, 157);
+  background-color: rgb(221, 212, 197);
 }
 .header__icon {
   width: 64px;
@@ -33,7 +33,7 @@
   transition: color 0.3s;
 }
 .header__link:hover {
-  color: rgb(218, 210, 210);
+  color: rgb(239, 137, 108);
 }
 @media (max-width: 1130px) {
   .header__link {

@@ -29,17 +29,26 @@ export const Header = () => {
           </a>
         </div>
         <nav className="header__links-container">
-          <p className="header__link">
-            <a href="#form">{t("navbar.contactUs")}</a>
+          <p>
+            <a href="#form" className="header__link">
+              {t("navbar.contactUs")}
+            </a>
           </p>
-          <p className="header__link">
-            <a href="#textContainer">{t("navbar.about")}</a>
+          <p>
+            <a className="header__link" href="#textContainer">
+              {t("navbar.about")}
+            </a>
           </p>
-          <p className="header__link">
-            <a href="#slider">{t("navbar.dogs")}</a>
+          <p>
+            <a className="header__link" href="#slider">
+              {t("navbar.dogs")}
+            </a>
           </p>
-          <p className="header__link">
-            <a onClick={lng === "uk" ? switchToEnglish : switchToUkrainian}>
+          <p>
+            <a
+              className="header__link"
+              onClick={lng === "uk" ? switchToEnglish : switchToUkrainian}
+            >
               {t("language.switchToUkr")}
             </a>
           </p>

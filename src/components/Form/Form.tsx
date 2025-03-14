@@ -1,5 +1,5 @@
 import "./Form.scss";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const Form = () => {
@@ -12,25 +12,65 @@ export const Form = () => {
     email: "",
   });
 
+  const [errors, setErrors] = useState({
+    name: "",
+    surname: "",
+    phone: "",
+    email: "",
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const validateField = (name: string, value: string) => {
+    switch (name) {
+      case "name":
+      case "surname":
+        return value.trim().length < 2 ? t("form.errorName") : "";
+      case "phone":
+        return !/^\+380\d{9}$/.test(value) ? t("form.errorPhone") : "";
+      case "email":
+        return !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+          ? t("form.errorEmail")
+          : "";
+      default:
+        return "";
+    }
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitted(true);
+
+    const newErrors = {
+      name: validateField("name", formData.name),
+      surname: validateField("surname", formData.surname),
+      phone: validateField("phone", formData.phone),
+      email: validateField("email", formData.email),
+    };
+
+    setErrors(newErrors);
+
+    if (Object.values(newErrors).some((error) => error)) {
+      return;
+    }
 
     try {
       const response = await fetch("server.php", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
       });
 
       if (response.ok) {
         alert("Дані надіслано успішно!");
-        setFormData({ name: "", surname: "", phone: "", email: "" }); // Очищаємо форму
+        setFormData({ name: "", surname: "", phone: "", email: "" });
+        setErrors({ name: "", surname: "", phone: "", email: "" });
+        setIsSubmitted(false);
       } else {
         alert("Помилка при надсиланні даних.");
       }
@@ -41,13 +81,12 @@ export const Form = () => {
 
   return (
     <div className="form__container" id="form">
-      <form onSubmit={handleSubmit} method="post" className="form">
+      <form onSubmit={handleSubmit} className="form">
         <label className="form__label">
           {t("form.name")}:
           <input
             placeholder={t("form.placeholderName")}
-            required
-            className="form__input"
+            className={`form__input ${isSubmitted && errors.name ? "invalid" : ""}`}
             type="text"
             name="name"
             value={formData.name}
@@ -58,8 +97,7 @@ export const Form = () => {
           {t("form.surname")}:
           <input
             placeholder={t("form.placeholderSurname")}
-            required
-            className="form__input"
+            className={`form__input ${isSubmitted && errors.surname ? "invalid" : ""}`}
             type="text"
             name="surname"
             value={formData.surname}
@@ -70,8 +108,7 @@ export const Form = () => {
           {t("form.phone")}:
           <input
             placeholder="+380000000000"
-            required
-            className="form__input"
+            className={`form__input ${isSubmitted && errors.phone ? "invalid" : ""}`}
             type="tel"
             name="phone"
             value={formData.phone}
@@ -82,8 +119,7 @@ export const Form = () => {
           {t("form.email")}:
           <input
             placeholder="email@gmail.com"
-            required
-            className="form__input"
+            className={`form__input ${isSubmitted && errors.email ? "invalid" : ""}`}
             type="email"
             name="email"
             value={formData.email}

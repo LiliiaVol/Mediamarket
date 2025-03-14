@@ -10,7 +10,7 @@
 a {
   cursor: pointer;
   text-decoration: none;
-  color: rgba(55, 60, 60);
+  color: variables.$grey-color;
 }
 
 html {
@@ -20,7 +20,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(81, 178, 162);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(149, 149, 149, 0.5), rgba(255, 255, 255, 0.5)),
+    url("background_paw.JPG") repeat;
 }
 
 .container {

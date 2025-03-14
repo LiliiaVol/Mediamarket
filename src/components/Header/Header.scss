@@ -24,7 +24,7 @@
   &__links-container {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: variables.$regular-gap;
 
     @include mixins.on-phone {
       gap: 12px;
@@ -36,7 +36,8 @@
     transition: color variables.$transition-duration;
 
     &:hover {
-      color: rgb(218, 210, 210);
+      color: variables.$accent-color;
+      //color: #F7F7F0;
     }
 
     @include mixins.on-phone {

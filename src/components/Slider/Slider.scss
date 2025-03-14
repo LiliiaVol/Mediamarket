@@ -1,10 +1,12 @@
+@use '../../styles/variables';
+
 .banner-slider {
   position: relative;
 
   &__slides {
     box-sizing: border-box;
     height: 600px;
-    padding: 0 32px;
+    padding: 0 variables.$regular-gap;
   }
 
   &__button {
@@ -20,12 +22,12 @@
 
     &--prev {
       top: 50%;
-      left: 32px;
+      left: variables.$regular-gap;
     }
 
     &--next {
       top: 50%;
-      right: 32px;
+      right: variables.$regular-gap;
     }
   }
 

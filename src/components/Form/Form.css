@@ -10,10 +10,10 @@
 }
 .form__container {
   box-sizing: border-box;
-  border: 1px solid rgb(39, 151, 138);
+  border: 1px solid rgb(104, 104, 104);
   border-radius: 10px;
   padding: 20px;
-  background-color: rgb(50, 172, 157);
+  background-color: rgb(221, 212, 197);
   width: 100%;
 }
 .form__label {
@@ -30,7 +30,6 @@
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 16px;
-  line-height: 19px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -63,6 +62,15 @@
   font-weight: 400;
   font-size: 16px;
   color: #ADAEBC;
+}
+
+.invalid {
+  transition: border 0.3s;
+  background-color: rgba(200, 0, 0, 0.2);
+}
+.invalid:hover {
+  transition: border 0.3s;
+  border: 2px solid #ff4545;
 }
 
 /*# sourceMappingURL=Form.css.map */
