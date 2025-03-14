@@ -25,7 +25,7 @@ export const Header = () => {
       <div className="header__container container">
         <div className="header__icon-container">
           <a href="/">
-            <img src="/icons/paw-solid.svg" className="header__icon" />
+            <img src="icons/paw-solid.svg" className="header__icon" />
           </a>
         </div>
         <nav className="header__links-container">

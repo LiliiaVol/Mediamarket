@@ -1,8 +1,10 @@
 import "./Form.scss";
 import { useState } from "react";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export const Form = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     surname: "",

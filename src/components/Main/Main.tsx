@@ -5,11 +5,11 @@ import { TextComponent } from "../TextComponent/TextComponent.tsx";
 import { Slider } from "../Slider/Slider.tsx";
 
 const slides = [
-  "/sliders/slide1.avif",
-  "/sliders/slide2.jpg",
-  "/sliders/slide3.avif",
-  "/sliders/slide4.jpeg",
-  "/sliders/slide5.avif",
+  "sliders/slide1.avif",
+  "sliders/slide2.jpg",
+  "sliders/slide3.avif",
+  "sliders/slide4.jpeg",
+  "sliders/slide5.avif",
 ];
 
 export const Main = () => {
